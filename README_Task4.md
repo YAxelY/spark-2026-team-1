@@ -28,7 +28,7 @@ The primary function `assess_risk(row)` consumes a dictionary mapping of a singl
    - Normal: 8 to 14
    - High Risk: 15+
 
-The aggregated result is seamlessly cast into a `Low`, `Medium`, or `High` risk classification, and returned as a tuple alongside the math components.
+Scoring weights: Normal=0, Low/Elevated=+1, High/Inadequate=+2, Severe=+3. The total score dictates the final classification: `Low` (0-1), `Medium` (2-4), or `High` (5+).
 
 ## Usage
 The `assess_risk(row)` function relies solely on native Python mechanisms without enforcing Pandas requirements within its own signature. This standalone format natively interacts with the dictionaries fetched row-by-row during loop evaluations. It can act as a central validation unit to be imported into the Patient Classes logic.
