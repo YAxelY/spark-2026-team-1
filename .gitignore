@@ -1,0 +1,12 @@
+# Ignore everything in the directory by default
+*
+
+# Un-ignore directories so git can traverse into them (if ever needed)
+!*/
+
+# Explicitly whitelist the two files for Task 4
+!Task4_Risk_Logic.ipynb
+!README_Task4.md
+
+# Also whitelist this .gitignore file itself so it is tracked correctly
+!.gitignore
